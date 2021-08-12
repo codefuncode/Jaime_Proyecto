@@ -1,0 +1,63 @@
+Tabla clientes 
+
+	Numero de caso 
+	apellidos
+	nombre
+	inicial 
+	apodo 
+	direccion postal y fisica 
+	pueblo 
+	fecha de naciminto 
+	prefecion / ocupacion 
+
+	genero 
+	email 
+	numero de telefono 
+
+================================
+Otras opcional 
+
+
+fecha visita
+razon visista
+tipo caso  ** familia , civil u otros 
+======================
+
+documentos segun tipo de caso 
+
+========================
+docuementos legales y solisitado0s 
+
+
+====================================================
+
+Tabla abogados 
+apellido
+nombre 
+especialidad 
+====================================================================
+
+registro usuarios ****
+
+Tabla tipo usuario
+
+
+* Tabla Cliente 
+
+
+Tabla Casos
+
+
+* Tabla Visita
+	Estado visita
+
+
+Tabla Tipo de caso
+
+
+Tabla Abogado
+
+
+Tabla Documentos
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
