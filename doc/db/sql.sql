@@ -63,21 +63,23 @@ CREATE TABLE Documento (
     directorio VARCHAR(20) not null,
     id_caso int(11) NOT NULL,
     id_tipo_caso int(11) NOT NULL,
-		subdirectorio_caso VARCHAR(20),
+    subdirectorio_caso VARCHAR(20),
     subdirectorio_tipocaso VARCHAR(20),
     url_fichero VARCHAR(20) NOT NULL,
+    PRIMARY KEY (id_documento)
     FOREIGN KEY (id_tipo_caso) REFERENCES TipoCaso(id_tipo_caso)
     FOREIGN KEY (id_caso) REFERENCES Casos(id_caso)
+    FOREIGN KEY (id_cliente) REFERENCES Cliente(id_cliente)
 
 );
 -- ====================================
 
 CREATE TABLE Abogado (
-  	id_abogado int(11) NOT NULL AUTO_INCREMENT,
-		nombre VARCHAR(10) NOT NULL,
-		apellidos VARCHAR(10) NOT NULL,
-		id_especialidad int(11) NULL,
-		FOREIGN KEY (id_especialidad) REFERENCES Especialidad(id_especialidad)
+	id_abogado int(11) NOT NULL AUTO_INCREMENT,
+	nombre VARCHAR(10) NOT NULL,
+	apellidos VARCHAR(10) NOT NULL,
+	id_especialidad int(11) NULL,
+	FOREIGN KEY (id_especialidad) REFERENCES Especialidad(id_especialidad)
 );
 
 CREATE TABLE Especialidad (
