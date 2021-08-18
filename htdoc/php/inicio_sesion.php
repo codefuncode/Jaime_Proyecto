@@ -1,5 +1,5 @@
 
-	<?php
+   <?php
 $user = $_POST['user'];
 $pass = $_POST['pass'];
 // $user = "adminl";
@@ -25,12 +25,13 @@ if ($existe_usuario["resultado"]) {
    }
 
 } else {
-//  Cuando habilitemos el registro de usuyario debemos redirigir
+   //  Cuando habilitemos el registro de usuyario debemos redirigir
    // $resultado = "{$resultado} usuario no existe <br/>";
 }
-usuario_esiste($user);
-echo "====================<br/>====================";
-valida_usuario($user, $pass);
+// usuario_esiste($user);
+// echo "====================<br/>====================";
+// valida_usuario($user, $pass);
+
 function usuario_esiste($user)
 {
    include "../conn/conn.php";
@@ -41,7 +42,7 @@ function usuario_esiste($user)
 
       $stmt = $conn->prepare(
          "SELECT * from Usuario
-   				WHERE usuario=:user"
+               WHERE usuario=:user"
       );
 
       $stmt->bindParam(':user', $user);
@@ -81,8 +82,8 @@ function valida_usuario($p_user, $p_pass)
 
       $stmt = $conn->prepare(
          "SELECT * from Usuario
-   				WHERE usuario=:user
-   				AND pass=:pass"
+               WHERE usuario=:user
+               AND pass=:pass"
       );
       $stmt->bindParam(':user', $p_user);
       $stmt->bindParam(':pass', $p_pass);
