@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 14-08-2021 a las 00:43:50
+-- Tiempo de generación: 19-08-2021 a las 00:08:33
 -- Versión del servidor: 10.4.19-MariaDB
 -- Versión de PHP: 7.4.20
 
@@ -55,8 +55,8 @@ CREATE TABLE `Casos` (
 
 CREATE TABLE `Cliente` (
   `id_cliente` int(11) NOT NULL,
-  `nombre` varchar(10) NOT NULL,
-  `apellidos` varchar(10) NOT NULL,
+  `nombre` varchar(20) NOT NULL,
+  `apellidos` varchar(20) NOT NULL,
   `inicial` char(1) DEFAULT NULL,
   `apodo` varchar(10) DEFAULT NULL,
   `direccion_postal` varchar(255) NOT NULL,
@@ -64,11 +64,15 @@ CREATE TABLE `Cliente` (
   `direccion_fisica` varchar(255) NOT NULL,
   `pueblo` varchar(20) NOT NULL,
   `fecha_de_naciminto` date NOT NULL,
-  `genero` varchar(8) NOT NULL,
+  `genero` varchar(10) NOT NULL,
   `email` varchar(255) DEFAULT NULL,
-  `telefono` varchar(10) DEFAULT NULL,
+  `telefono` varchar(10) NOT NULL,
   `ocupacion` varchar(30) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `Cliente`
+--
 
 -- --------------------------------------------------------
 
@@ -120,6 +124,13 @@ CREATE TABLE `TipoUsuario` (
   `tipo_usuario` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `TipoUsuario`
+--
+
+INSERT INTO `TipoUsuario` (`id_tipo_usuario`, `tipo_usuario`) VALUES
+(1, 'admin');
+
 -- --------------------------------------------------------
 
 --
@@ -128,10 +139,18 @@ CREATE TABLE `TipoUsuario` (
 
 CREATE TABLE `Usuario` (
   `id_usuario` int(11) NOT NULL,
-  `usuario` int(11) NOT NULL,
+  `usuario` varchar(11) NOT NULL,
   `pass` varchar(255) NOT NULL,
-  `id_tipo_usuario` int(11) NOT NULL
+  `id_tipo_usuario` int(11) NOT NULL,
+  `id_persona` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `Usuario`
+--
+
+INSERT INTO `Usuario` (`id_usuario`, `usuario`, `pass`, `id_tipo_usuario`, `id_persona`) VALUES
+(1, 'admin', 'admin', 1, NULL);
 
 -- --------------------------------------------------------
 
@@ -234,7 +253,7 @@ ALTER TABLE `Casos`
 -- AUTO_INCREMENT de la tabla `Cliente`
 --
 ALTER TABLE `Cliente`
-  MODIFY `id_cliente` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- AUTO_INCREMENT de la tabla `Documento`
@@ -252,13 +271,13 @@ ALTER TABLE `TipoCaso`
 -- AUTO_INCREMENT de la tabla `TipoUsuario`
 --
 ALTER TABLE `TipoUsuario`
-  MODIFY `id_tipo_usuario` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_tipo_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `Usuario`
 --
 ALTER TABLE `Usuario`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `Visita`

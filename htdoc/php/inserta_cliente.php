@@ -72,6 +72,7 @@ function datos_clinete($id)
 
       // set the resulting array to associative
       $data               = $stmt->fetchAll(PDO::FETCH_ASSOC);
+      $id_cliente         = $data[0]['id_cliente'];
       $nombre             = $data[0]['nombre'];
       $apellidos          = $data[0]['apellidos'];
       $inicial            = $data[0]['inicial'];

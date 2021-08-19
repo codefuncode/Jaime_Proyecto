@@ -108,3 +108,8 @@ CREATE TABLE TipoUsuario (
 
 
 
+CREATE TABLE `jaimedb`.`acceso_usuario` 
+( `id_clinte` INT(11) NULL ,
+ `id_usuario` INT(11) NULL , 
+ UNIQUE `accseso_usuarios` 
+ (`id_clinte`, `id_usuario`)) ENGINE = InnoDB; 
