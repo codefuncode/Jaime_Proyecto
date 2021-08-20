@@ -106,7 +106,7 @@
          <button class="w3-button w3-red w3-left">
             Editar
          </button>
-         <form action="php/abrir_caso.php" method="post">
+         <form action="abrir_caso.php" method="post">
             <input id="custId" name="id_cliente" type="hidden" value="<?=$id_cliente;?>"/>
             <input id="custId" name="nombre" type="hidden" value="<?=$nombre;?>"/>
             <input id="custId" name="apellidos" type="hidden" value="<?=$apellidos;?>"/>

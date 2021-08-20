@@ -1,7 +1,7 @@
 <?php if (!isset($_COOKIE["user"])):
    header("Location: page-login.php");
    ?>
-	            <?php else: ?>
+                  <?php else: ?>
 <!DOCTYPE html>
 <html lang="en">
    <!-- gegerar id del isuario datos nombre todo -->
@@ -46,7 +46,7 @@
          <div class="content-body">
 <!-- ============================================================================================================ -->
 
-
+     <?php include "comp/abrir_caso.php";?>
 
 
 <!-- ============================================================================================================ -->

@@ -1,2 +1,4 @@
 sudo /opt/lampp/lampp start
 
+ *** Ficero inclompleto 
+/home/code/Escritorio/Proyecto/Jaime_Proyecto/htdoc/php/crea_caso.php

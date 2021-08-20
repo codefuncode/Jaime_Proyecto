@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 19-08-2021 a las 00:08:33
+-- Tiempo de generación: 20-08-2021 a las 02:10:26
 -- Versión del servidor: 10.4.19-MariaDB
 -- Versión de PHP: 7.4.20
 
@@ -37,6 +37,17 @@ CREATE TABLE `Abogado` (
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `acceso_usuario`
+--
+
+CREATE TABLE `acceso_usuario` (
+  `id_clinte` int(11) DEFAULT NULL,
+  `id_usuario` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `Casos`
 --
 
@@ -44,7 +55,8 @@ CREATE TABLE `Casos` (
   `id_caso` int(11) NOT NULL,
   `id_cliente` int(11) NOT NULL,
   `id_visita` int(11) NOT NULL,
-  `id_tipo_caso` int(11) NOT NULL
+  `id_tipo_caso` int(11) NOT NULL,
+  `descripcion_caso` longtext DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -69,10 +81,6 @@ CREATE TABLE `Cliente` (
   `telefono` varchar(10) NOT NULL,
   `ocupacion` varchar(30) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `Cliente`
---
 
 -- --------------------------------------------------------
 
@@ -124,13 +132,6 @@ CREATE TABLE `TipoUsuario` (
   `tipo_usuario` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Volcado de datos para la tabla `TipoUsuario`
---
-
-INSERT INTO `TipoUsuario` (`id_tipo_usuario`, `tipo_usuario`) VALUES
-(1, 'admin');
-
 -- --------------------------------------------------------
 
 --
@@ -144,13 +145,6 @@ CREATE TABLE `Usuario` (
   `id_tipo_usuario` int(11) NOT NULL,
   `id_persona` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `Usuario`
---
-
-INSERT INTO `Usuario` (`id_usuario`, `usuario`, `pass`, `id_tipo_usuario`, `id_persona`) VALUES
-(1, 'admin', 'admin', 1, NULL);
 
 -- --------------------------------------------------------
 
@@ -176,6 +170,12 @@ CREATE TABLE `Visita` (
 ALTER TABLE `Abogado`
   ADD PRIMARY KEY (`id_abogado`),
   ADD KEY `id_especialidad` (`id_especialidad`);
+
+--
+-- Indices de la tabla `acceso_usuario`
+--
+ALTER TABLE `acceso_usuario`
+  ADD UNIQUE KEY `accseso_usuarios` (`id_clinte`,`id_usuario`);
 
 --
 -- Indices de la tabla `Casos`
@@ -253,7 +253,7 @@ ALTER TABLE `Casos`
 -- AUTO_INCREMENT de la tabla `Cliente`
 --
 ALTER TABLE `Cliente`
-  MODIFY `id_cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `id_cliente` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `Documento`
@@ -271,13 +271,13 @@ ALTER TABLE `TipoCaso`
 -- AUTO_INCREMENT de la tabla `TipoUsuario`
 --
 ALTER TABLE `TipoUsuario`
-  MODIFY `id_tipo_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_tipo_usuario` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `Usuario`
 --
 ALTER TABLE `Usuario`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `Visita`

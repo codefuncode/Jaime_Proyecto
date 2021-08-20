@@ -2,7 +2,7 @@
 get_tipocaso();
 function get_tipocaso()
 {
-   include '../conn/conn.php';
+   include 'conn/conn.php';
    try {
       $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
       $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
