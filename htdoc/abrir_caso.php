@@ -1,10 +1,9 @@
 <?php if (!isset($_COOKIE["user"])):
    header("Location: page-login.php");
    ?>
-                  <?php else: ?>
+<?php else: ?>
 <!DOCTYPE html>
 <html lang="en">
-   <!-- gegerar id del isuario datos nombre todo -->
    <?php include_once "comp/head.php";?>
    <body>
       <div id="preloader">
@@ -35,29 +34,12 @@
                </div>
             </div>
          </div>
-     <?php include_once "comp/header.php";?>
+         <?php include_once "comp/header.php";?>
          <?php include_once "comp/menu.php";?>
-         <!--**********************************
-            Sidebar end
-        ***********************************-->
-         <!--**********************************
-            Content body start
-        ***********************************-->
          <div class="content-body">
-<!-- ============================================================================================================ -->
-
-     <?php include "comp/abrir_caso.php";?>
-
-
-<!-- ============================================================================================================ -->
+            <?php include "comp/abrir_caso.php";?>
          </div>
-         <!--**********************************
-            Content body end
-        ***********************************-->
-         <!--**********************************
-            Footer start
-        ***********************************-->
-       <?php include_once "comp/footer.php";?>
+         <?php include_once "comp/footer.php";?>
       </div>
       <?php include_once "comp/javascript_pie.php";?>
    </body>

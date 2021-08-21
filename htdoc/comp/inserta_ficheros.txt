@@ -1,0 +1,27 @@
+
+// id_documento    id_cliente    directorio    id_caso    id_tipo_caso    subdirectorio_caso    subdirectorio_tipocaso    url_fichero
+
+
+$id_cliente   = 30;
+$id_caso      = "id_caso";
+$id_tipo_caso = "otromas";
+// var_dump(is_dir('directorio/abc'));
+if (is_dir('../doc_cliente/{$id_cliente}')) {
+   echo "es directorio";
+   echo "<br/>";
+} else {
+   echo "No lo es ";
+   echo "<br/>";
+}
+
+if (mkdir(
+	"../doc_cliente/{$id_cliente}",
+	 0777, true)) {
+   echo "<br/>";
+   echo "creado";
+} else {
+   echo "error";
+   echo "<br/>";
+}
+// /home/code/Escritorio/Proyecto/Jaime_Proyecto/htdoc/php/inserta_ficheros.php
+

@@ -13,7 +13,7 @@ $apellidos  = $_POST['apellidos'];
       <?=$apellidos;?>
    </h2>
 </div>
-<form action="php/crea_caso.php" method="post">
+<form action="crea_caso.php" method="post">
    <div class="w3-row-padding">
       <div class="w3-col s12 m2 l2">
          <label for="">
