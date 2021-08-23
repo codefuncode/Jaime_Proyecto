@@ -21,18 +21,18 @@ function inserta_cliente()
       // ****** elimina y muestra campos requere convertir a nulo un valor vacio  ******
       $nombre             = $_POST['nombre'];
       $apellidos          = $_POST['apellidos'];
-      $inicial            = $_POST['inicial'];
-      $apodo              = $_POST['apodo'];
+      $inicial            = (isset($_POST['inicial'])) ? $_POST['inicial'] : "";
+      $apodo              = (isset($_POST['apodo'])) ? $_POST['apodo'] : "NULL";
       $direccion_postal   = $_POST['direccion_postal'];
       $codigo_area        = $_POST['codigo_area'];
       $direccion_fisica   = $_POST['direccion_fisica'];
       $pueblo             = $_POST['pueblo'];
       $fecha_de_naciminto = $_POST['fecha_de_naciminto'];
       $genero             = $_POST['genero'];
-      $email              = $_POST['email'];
+      $email              = (isset($_POST['email'])) ? $_POST['email'] : "NULL";
       $telefono           = $_POST['telefono'];
-      $ocupacion          = $_POST['ocupacion'];
-
+      $ocupacion          = (isset($_POST['ocupacion'])) ? $_POST['ocupacion'] : "NULL";
+// ($result >= 40) ? "Passed" : " Failed";
       //  Se aplican los valores de la consulta preparada  usando la funcion bindParam()
       $stmt->bindParam(':nombre', $nombre);
       $stmt->bindParam(':apellidos', $apellidos);

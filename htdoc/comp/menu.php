@@ -14,7 +14,7 @@
             </a>
          </li>
          <li>
-            <a aria-expanded="false" class="has-arrow" href="javascript:void()">
+            <a aria-expanded="false" class="has-arrow" href="ver_clientes.php">
                <i class="icon icon-app-store">
                </i>
                <span class="nav-text">

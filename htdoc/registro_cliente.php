@@ -1,6 +1,6 @@
 <?php if (!isset($_COOKIE["user"])):
    header("Location: page-login.php");?>
-         <?php else: ?>
+<?php else: ?>
 <!DOCTYPE html>
 <html lang="en">
    <?php include "comp/head.php";?>
@@ -33,6 +33,8 @@
          <?php include "comp/footer.php";?>
       </div>
       <?php include "comp/javascript_pie.php";?>
+      <script src="js/formulario_cliente.js" type="text/javascript">
+      </script>
    </body>
 </html>
 <?php endif;?>

@@ -5,11 +5,11 @@
       </h1>
    </div>
    <div class="w3-container formulario_cliente" style="margin-top: 20px;">
-      <!--  Formulario para ser enviado todos los elementos 
-       con atributo nombre son considerados  para capturar 
-       los datos que se ingresaros dentro del mismo. 
+      <!--  Formulario para ser enviado todos los elementos
+       con atributo nombre son considerados  para capturar
+       los datos que se ingresaros dentro del mismo.
        Los datos son enviados al fichero del atributo action -->
-      <form action="perfil_cleinte.php" class="w3-container" method="post">
+      <form action="perfil_cleinte.php" class="w3-container contenedor_formulario_cliente" method="post">
          <p>
             <input class="w3-input w3-border" name="nombre" required="" type="text"/>
             <label>
@@ -23,13 +23,15 @@
             </label>
          </p>
          <p>
-            <input class="w3-input w3-border" name="inicial" required="" type="text"/>
+            <input class="w3-input w3-border" name="inicial" type="text"/>
+            <input class="w3-check btn_check_inicial" type="checkbox"/>
             <label>
                Inicial
             </label>
          </p>
          <p>
-            <input class="w3-input w3-border" name="apodo" required="" type="text"/>
+            <input class="w3-input w3-border" name="apodo" type="text"/>
+            <input class="w3-check btn_check_apodo" type="checkbox"/>
             <label>
                Apodo
             </label>
@@ -77,7 +79,8 @@
             </label>
          </p>
          <p>
-            <input class="w3-input w3-border" name="email" required="" type="email"/>
+            <input class="w3-input w3-border" name="email" type="email"/>
+            <input class="w3-check btn_check_correo" type="checkbox"/>
             <label>
                Correo electrónico
             </label>
@@ -89,7 +92,8 @@
             </label>
          </p>
          <p>
-            <input class="w3-input w3-border" name="ocupacion" required="" type="text"/>
+            <input class="w3-input w3-border" name="ocupacion" type="text"/>
+            <input class="w3-check btn_check_ocupacion" type="checkbox"/>
             <label>
                Ocupación
             </label>
