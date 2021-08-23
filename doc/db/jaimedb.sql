@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 20-08-2021 a las 02:10:26
+-- Tiempo de generación: 23-08-2021 a las 03:08:45
 -- Versión del servidor: 10.4.19-MariaDB
 -- Versión de PHP: 7.4.20
 
@@ -70,7 +70,7 @@ CREATE TABLE `Cliente` (
   `nombre` varchar(20) NOT NULL,
   `apellidos` varchar(20) NOT NULL,
   `inicial` char(1) DEFAULT NULL,
-  `apodo` varchar(10) DEFAULT NULL,
+  `apodo` varchar(20) DEFAULT NULL,
   `direccion_postal` varchar(255) NOT NULL,
   `codigo_area` varchar(10) NOT NULL,
   `direccion_fisica` varchar(255) NOT NULL,
@@ -94,8 +94,8 @@ CREATE TABLE `Documento` (
   `directorio` varchar(20) NOT NULL,
   `id_caso` int(11) NOT NULL,
   `id_tipo_caso` int(11) NOT NULL,
-  `subdirectorio_caso` varchar(20) DEFAULT NULL,
-  `subdirectorio_tipocaso` varchar(20) DEFAULT NULL,
+  `subdirectorio_caso` varchar(255) DEFAULT NULL,
+  `subdirectorio_tipocaso` varchar(255) DEFAULT NULL,
   `url_fichero` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -157,7 +157,7 @@ CREATE TABLE `Visita` (
   `id_cliente` int(11) NOT NULL,
   `razon_visita` longtext NOT NULL,
   `estado_visita` varchar(20) NOT NULL,
-  `facha_visita` datetime NOT NULL
+  `fecha_visita` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -196,10 +196,7 @@ ALTER TABLE `Cliente`
 -- Indices de la tabla `Documento`
 --
 ALTER TABLE `Documento`
-  ADD PRIMARY KEY (`id_documento`),
-  ADD KEY `id_tipo_caso` (`id_tipo_caso`),
-  ADD KEY `id_caso` (`id_caso`),
-  ADD KEY `id_cliente` (`id_cliente`);
+  ADD PRIMARY KEY (`id_documento`);
 
 --
 -- Indices de la tabla `Especialidad`
