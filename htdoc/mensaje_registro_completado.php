@@ -1,13 +1,20 @@
-crea_caso.php
+<!--
+Condicional para detectar la galleta
+insertada en el navegador "Cooke"
+-->
 <?php if (!isset($_COOKIE["user"])):
-   header("Location: page-login.php");
-   ?>
-   <?php else: ?>
+   header("Location: page-login.php");?>
+				   <?php else: ?>
+
 <!DOCTYPE html>
 <html lang="en">
+   <!--
+   Cabecera del documento incluye enlace a hojas externas y etiquetas meta entre otros
+   -->
    <?php include_once "comp/head.php";?>
    <body>
-       <?php include_once "comp/preloader.php";?>
+      <!--  Componente previo a la carga total del; fichero actual  -->
+      <?php include_once "comp/preloader.php";?>
       <div id="main-wrapper">
          <div class="nav-header">
             <a class="brand-logo" href="index.html">
@@ -26,14 +33,23 @@ crea_caso.php
                </div>
             </div>
          </div>
+         <!--  Cabecera del documento  -->
+
          <?php include_once "comp/header.php";?>
+
+         <!--
+         Menú contiene solo la barra lateral y ademas enlaces de navegación
+         -->
          <?php include_once "comp/menu.php";?>
-         <div class="content-body">
-            <!--   -->
-            <?php include "php/crea_caso.php";?>
+
+ 				 <?php include_once "comp/mensaje_registro_completado.php";?>
          </div>
+         <!--  Pie de la pagina web o aplicación  -->
          <?php include_once "comp/footer.php";?>
       </div>
+      <!--
+      Contiene enlaces a ficheros externos de JavaScript
+      -->
       <?php include_once "comp/javascript_pie.php";?>
    </body>
 </html>

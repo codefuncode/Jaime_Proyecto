@@ -1,97 +1,101 @@
 <div class="w3-container w3-padding">
-   <div class="w3-container"style="background-color: #343957; ">
-  <h1 style="color:#f9fafc;">My Header</h1>
-</div>
+   <div class="w3-container" style="background-color: #343957; ">
+      <h1 style="color:#f9fafc;">
+         My Header
+      </h1>
+   </div>
    <div class="w3-container formulario_cliente" style="margin-top: 20px;">
+      <!--  Formulario para ser enviado todos los elementos 
+       con atributo nombre son considerados  para capturar 
+       los datos que se ingresaros dentro del mismo. 
+       Los datos son enviados al fichero del atributo action -->
       <form action="perfil_cleinte.php" class="w3-container" method="post">
          <p>
-            <input  required="" class="w3-input w3-border" name="nombre" type="text"/>
+            <input class="w3-input w3-border" name="nombre" required="" type="text"/>
             <label>
                Nombre
             </label>
          </p>
          <p>
-            <input  required="" class="w3-input w3-border" name="apellidos" type="text"/>
+            <input class="w3-input w3-border" name="apellidos" required="" type="text"/>
             <label>
                Apellidos
             </label>
          </p>
          <p>
-            <input  required="" class="w3-input w3-border" name="inicial" type="text"/>
+            <input class="w3-input w3-border" name="inicial" required="" type="text"/>
             <label>
                Inicial
             </label>
          </p>
          <p>
-            <input  required="" class="w3-input w3-border" name="apodo" type="text"/>
+            <input class="w3-input w3-border" name="apodo" required="" type="text"/>
             <label>
                Apodo
             </label>
          </p>
          <p>
-            <textarea  style="height: 75px;width: 100%;" id="" name="direccion_postal" >
+            <textarea id="" name="direccion_postal" style="height: 75px;width: 100%;">
             </textarea>
-               <!-- <input  required="" class="w3-input w3-border" name="xxxxxx" type="text"/> -->
             <label>
-             Dirección postal
+               Dirección postal
             </label>
          </p>
          <p>
-            <input  required="" class="w3-input w3-border" name="codigo_area" type="numeric"/>
+            <input class="w3-input w3-border" name="codigo_area" required="" type="numeric"/>
             <label>
                Código de área
             </label>
          </p>
          <p>
-            <textarea  style="height: 75px;width: 100%;" id="" name="direccion_fisica" >
+            <textarea id="" name="direccion_fisica" style="height: 75px;width: 100%;">
             </textarea>
-             <label>
+            <label>
                Dirección física
             </label>
          </p>
          <p>
-            <input  required="" class="w3-input w3-border" name="pueblo" type="text"/>
+            <input class="w3-input w3-border" name="pueblo" required="" type="text"/>
             <label>
                Pueblo
             </label>
-
          </p>
          <p>
-            <input  required="" class="w3-input w3-border" name="fecha_de_naciminto" type="date"/>
+            <input class="w3-input w3-border" name="fecha_de_naciminto" required="" type="date"/>
             <label>
                Fecha de nacimiento
             </label>
          </p>
          <p>
-            <input  required="" class="w3-radio" name="genero" type="radio" value="Masculino"/>
+            <input class="w3-radio" name="genero" required="" type="radio" value="Masculino"/>
             <label>
                Masculino
             </label>
-            <input  required="" class="w3-radio" name="genero" type="radio" value="Femenino"/>
+            <input class="w3-radio" name="genero" required="" type="radio" value="Femenino"/>
             <label>
                Femenino
             </label>
          </p>
          <p>
-            <input  required="" class="w3-input w3-border" name="email" type="email"/>
+            <input class="w3-input w3-border" name="email" required="" type="email"/>
             <label>
                Correo electrónico
             </label>
          </p>
          <p>
-            <input  required="" class="w3-input w3-border" name="telefono" type="tel"/>
+            <input class="w3-input w3-border" name="telefono" required="" type="tel"/>
             <label>
                Teléfono
             </label>
          </p>
          <p>
-            <input  required="" class="w3-input w3-border" name="ocupacion" type="text"/>
+            <input class="w3-input w3-border" name="ocupacion" required="" type="text"/>
             <label>
                Ocupación
             </label>
          </p>
          <p>
-            <input  required="" class="w3-btn w3-green" type="submit" value="Registrar"/>
+            <input class="w3-btn w3-green" required="" type="submit" value="Registrar"/>
          </p>
       </form>
    </div>

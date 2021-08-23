@@ -1,5 +1,5 @@
 <?php
-
+// Recibe los datos vía post
 $id_cliente = $_POST['id_cliente'];
 $nombre     = $_POST['nombre'];
 $apellidos  = $_POST['apellidos'];
@@ -13,6 +13,7 @@ $apellidos  = $_POST['apellidos'];
       <?=$apellidos;?>
    </h2>
 </div>
+<!--  Acción  donde se enviarán los datos del formulario  -->
 <form action="crea_caso.php" method="post">
    <div class="w3-row-padding">
       <div class="w3-col s12 m2 l2">
@@ -23,7 +24,7 @@ $apellidos  = $_POST['apellidos'];
          <label for="">
             Fecha
          </label>
-         <input class="w3-input w3-border w3-margin-bottom" name="facha_visita" type="date"/>
+         <input class="w3-input w3-border w3-margin-bottom" name="fecha_visita" type="date"/>
       </div>
       <div class="w3-col s12 m5 l5">
          <label for="">
@@ -46,12 +47,6 @@ $apellidos  = $_POST['apellidos'];
             Tipo de caso
          </label>
          <?php include "php/get_tipocaso.php";?>
-      </div>
-      <div class="w3-col s12 m6 l6">
-         <label for="">
-            Casos del cliente
-         </label>
-         <?php include "php/get_casos.php";?>
       </div>
    </div>
    <input id="custId" name="id_cliente" type="hidden" value="<?=$id_cliente;?>"/>

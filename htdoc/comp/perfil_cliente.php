@@ -4,6 +4,10 @@
          Perfil cliente
       </h1>
    </div>
+   <!-- Todos los datos encerados en etiquetas PHP son
+      resultado de las variables donde se incluye este fichero
+
+          -->
    <div class="w3-container formulario_cliente" style="margin-top: 20px;">
       <div class="w3-row">
          <div class="w3-third w3-container ">
@@ -11,6 +15,7 @@
                <h3>
                   Nombre:
                   <span>
+                     <!-- Despliegue del dato de la variable  -->
                      <?=$nombre;?>
                   </span>
                </h3>
@@ -102,30 +107,17 @@
          </div>
       </div>
       <div class="w3-container">
-         <input id="custId" name="id_cliente" type="hidden" value="<?=$id_cliente;?>"/>
+         <input name="id_cliente" type="hidden" value="<?=$id_cliente;?>"/>
          <button class="w3-button w3-red w3-left">
             Editar
          </button>
+         <!--  Formulario para abrir caso del cliente  -->
          <form action="abrir_caso.php" method="post">
-            <input id="custId" name="id_cliente" type="hidden" value="<?=$id_cliente;?>"/>
-            <input id="custId" name="nombre" type="hidden" value="<?=$nombre;?>"/>
-            <input id="custId" name="apellidos" type="hidden" value="<?=$apellidos;?>"/>
+            <input name="id_cliente" type="hidden" value="<?=$id_cliente;?>"/>
+            <input name="nombre" type="hidden" value="<?=$nombre;?>"/>
+            <input name="apellidos" type="hidden" value="<?=$apellidos;?>"/>
             <input class="w3-button w3-green w3-right" name="enviar" type="submit" value="Abrir caso"/>
          </form>
       </div>
-      <!--      <form action="">
-         <div class="w3-border-bottom">
-            <div class="custom-file mb-5">
-               <input id="custId" name="custId" type="hidden" value="<?=$id_cliente;?>"/>
-               <input class="custom-file-input" id="customFile" type="file"/>
-               <label class="custom-file-label" for="customFile">
-                  Choose file
-               </label>
-            </div>
-            <button class="w3-button w3-block w3-green">
-               Button
-            </button>
-         </div>
-      </form> -->
    </div>
 </div>

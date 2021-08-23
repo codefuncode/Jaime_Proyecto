@@ -15,7 +15,7 @@
                            </div>
                         </div>
                      </div>
-                     <ul class="navbar-nav header-right">
+                  <!--    <ul class="navbar-nav header-right">
                         <li class="nav-item dropdown notification_dropdown">
                            <a class="nav-link" data-toggle="dropdown" href="#" role="button">
                               <i class="mdi mdi-bell">
@@ -169,7 +169,7 @@
                               </a>
                            </div>
                         </li>
-                     </ul>
+                     </ul> -->
                   </div>
                </nav>
             </div>

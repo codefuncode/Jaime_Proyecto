@@ -1,20 +1,11 @@
 <?php if (!isset($_COOKIE["user"])):
    header("Location: page-login.php");?>
-<?php else: ?>
+         <?php else: ?>
 <!DOCTYPE html>
 <html lang="en">
    <?php include "comp/head.php";?>
    <body>
-      <div id="preloader">
-         <div class="sk-three-bounce">
-            <div class="sk-child sk-bounce1">
-            </div>
-            <div class="sk-child sk-bounce2">
-            </div>
-            <div class="sk-child sk-bounce3">
-            </div>
-         </div>
-      </div>
+      <?php include_once "comp/preloader.php";?>
       <div id="main-wrapper">
          <div class="nav-header">
             <a class="brand-logo" href="index.html">
@@ -36,6 +27,7 @@
          <?php include "comp/header.php";?>
          <?php include "comp/menu.php";?>
          <div class="content-body">
+            <!-- Componente del formulario para el  cliente nuevo  -->
             <?php include "comp/formulario_cliente.php";?>
          </div>
          <?php include "comp/footer.php";?>
