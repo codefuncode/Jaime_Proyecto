@@ -4,7 +4,7 @@ insertada en el navegador "Cooke"
 -->
 <?php if (!isset($_COOKIE["user"])):
    header("Location: page-login.php");?>
-		<?php else: ?>
+                        <?php else: ?>
 <!DOCTYPE html>
 <html lang="en">
    <!--
@@ -63,7 +63,7 @@ insertada en el navegador "Cooke"
                </tr>
 
                <?php
-
+// include "php/ver_clinte.php";
 include 'conn/conn.php';
 try {
    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
