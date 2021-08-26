@@ -23,6 +23,7 @@
                               <h4 class="text-center mb-4">
                                  Sign in your account
                               </h4>
+                              <!--  Modificado  la acción y le método del form  -->
                               <form action="php/inicio_sesion.php" method="post">
                                  <div class="form-group">
                                     <label>

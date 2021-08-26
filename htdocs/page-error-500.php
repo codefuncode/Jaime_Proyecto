@@ -10,6 +10,7 @@
       <link href="./images/favicon.png" rel="icon" sizes="16x16" type="image/png"/>
       <link href="./css/style.css" rel="stylesheet"/>
    </head>
+   <!--  No modificado y si esta en uso de posible error  -->
    <body class="h-100">
       <div class="authincation h-100">
          <div class="container-fluid h-100">
